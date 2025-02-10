@@ -1,0 +1,468 @@
+:root {
+    --black: #333333;
+    --white: #fffcf2;
+  }
+
+.d-flex.justify-content-center {
+    position: relative;
+    z-index: 100;
+}
+
+.menu-box {
+    width: 290px;
+    margin: 0 10px;
+    text-align: center;
+    height: 200px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    padding-top: 25px;
+    position: relative;
+    background-color: var(--white);
+    text-decoration: none;
+    /* Removes link underline */
+    color: inherit;
+    /* Ensures text color inherits from parent */
+    cursor: pointer;
+    /* Pointer cursor for clickable effect */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    /* Smooth hover effect */
+    border-radius: 4px;
+}
+
+.menu-box:hover {
+    transform: translateY(-5px);
+    /* Adds hover lift effect */
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    /* Darker shadow on hover */
+    text-decoration: none;
+}
+
+.menu-box::after {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background-color: var(--black);
+    /* Dark line color */
+    border-radius: 10px;
+}
+
+
+.menu-block-container {
+    justify-content: center;
+    flex-wrap: wrap;
+    /* background-color: #fffcf2; */
+    max-width: 1250px;
+    margin: auto;
+    padding: 20px 0px;
+    border-radius: 4px;
+}
+
+.menu-blocks-box {
+    border: 1px solid var(--white);
+    background-color: var(--white);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    /* Darker shadow on hover */
+    margin: 20px 10px;
+    padding: 50px 0;
+}
+
+.heading {
+    text-align: center;
+    margin-bottom: 50px;
+
+
+}
+
+.sub-sections {
+    padding-top: 100px;
+    color: var(--black);
+}
+
+.sub-section-row {
+    margin: 30px 0;
+}
+
+.sub-section-row {
+    margin: 30px 0;
+    display: flex;
+    flex-wrap: wrap;
+    /* Ensures proper alignment on smaller screens */
+}
+
+.row-description {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.row-description {
+    text-align: center;
+}
+
+.description-content {
+    max-width: 90%;
+}
+
+.form-container {
+    max-width: 80%;
+    min-height: 400px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 0 05px 5px;
+
+
+}
+
+.form-container h3 {
+    background-color: var(--black);
+    color: var(--white);
+    padding: 30px 0;
+    margin: 50px 0;
+    border-radius: 0 0 30px 30px;
+}
+
+label.btn.d-block.mb-2.chassis-number {
+    font-weight: 600;
+}
+
+input#chassis-number {
+    border: none;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    max-width: 83%;
+    margin: 30px auto;
+}
+
+
+button.btn.btn-submit.w-100.mb-3,
+button.btn.btn-primary.btn-details,
+a.btn.btn-primary {
+    padding: 15px 30px;
+    margin: 0px;
+    border-radius: 5px;
+    background-color: var(--black);
+    color: var(--white);
+}
+
+
+/* car stock */
+
+.details-popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1050;
+    background: var(--white);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 500px;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.details-popup .popup-content {
+    position: relative;
+    text-align: center;
+}
+
+.details-popup .close-popup {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.d-none {
+    display: none;
+}
+
+#toyota-details h3 {
+    text-align: left;
+}
+
+
+/* Custom CSS for Query Section */
+
+.query-section {
+    border-radius: 12px;
+}
+
+/* .query-section .heading {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #343a40;
+    /* Dark heading color 
+}*/
+
+.query-section p {
+    color: var(--black);
+    /* Muted text color */
+}
+
+*/ .query-section h3 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--black);
+    /* Slightly muted dark color */
+}
+
+.query-section .form-label {
+    font-size: 16px;
+    color: var(--black);
+    font-weight: 600;
+    margin-top: 10px;
+}
+
+.query-section .form-select {
+    border-radius: 5px;
+    border: 1px solid var(--white);
+    /* font-size: 0.95rem; */
+    padding: 0.5rem 0.75rem;
+    color: var(--black);
+    background-color: var(--white);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    min-width: 300px;
+}
+
+.query-section .form-select:focus {
+    border-color: var(--black);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.query-section .btn {
+    font-size: 16px;
+    font-weight: bold;
+    padding: 0.75rem;
+    border-radius: 6px;
+    background-color: var(--black);
+    color: var(--white);
+    border: none;
+    transition: background-color 0.3s ease;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.query-section .btn:hover {
+    color: var(--black);
+    background-color: var(--white);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .query-section .col-md-6 {
+        margin-bottom: 2rem;
+    }
+
+    .query-section .heading {
+        font-size: 1.75rem;
+    }
+
+    .query-section h3 {
+        font-size: 1.25rem;
+    }
+}
+
+/* 
+inquery form */
+
+form#inquiry-form {
+    margin-left: 20px;
+    padding: 50px 20px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.video-gallery {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.video-card {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    position: relative;
+    height: 200px;
+    margin: 20px;
+    overflow: hidden;
+}
+
+.video-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.video-overlay {
+    position: relative;
+    width: 100%;
+}
+
+.play-btn {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 22px;
+    color: #ff3939;
+    /* background-color: rgba(0, 0, 0, 0.6); */
+    border-radius: 20%;
+    padding: 15px;
+    display: flex
+;
+    justify-content: center;
+    align-items: center;
+}
+
+.play-btn i {
+    font-size: 30px;
+}
+
+.video-card:hover .play-btn {
+    opacity: 1;
+}
+
+.video-card img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+
+/* Removed custom play-btn and overlay styles */
+
+
+/* footer */
+.footer {
+    background: var(--black);
+    border-radius: 6px;
+    margin-top: 100px;
+}
+
+.footer .footer-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 3.5rem;
+    padding: 60px;
+}
+
+.footer-row .footer-col h4 {
+    color: var(--white);
+    font-size: 20px;
+    font-weight: 400;
+    text-align: left;
+    /* Ensures the heading aligns to the left */
+}
+
+.footer-col .links {
+    margin-top: 20px;
+    padding-left: 0;
+    /* Remove any default padding on the list */
+}
+
+.footer-col .links li {
+    list-style: none;
+    margin-bottom: 10px;
+    text-align: left;
+    /* Align list items to the left */
+}
+
+.footer-col .links li a {
+    text-decoration: none;
+    color: var(--white);
+}
+
+.footer-col .links li a:hover {
+    color: var(--white);
+}
+
+.footer-col p {
+    margin: 20px 0;
+    color: var(--white);
+    max-width: 300px;
+}
+
+.footer-col form {
+    display: flex;
+    gap: 5px;
+}
+
+.footer-col input {
+    height: 40px;
+    border-radius: 6px;
+    background: none;
+    width: 100%;
+    outline: none;
+    border: 1px solid #7489C6;
+    caret-color: var(--white);
+    color: var(--white);
+    padding-left: 10px;
+}
+
+.footer-col input::placeholder {
+    color: var(--white);
+}
+
+.footer-col form button {
+    background: var(--white);
+    outline: none;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: 0.2s ease;
+}
+
+.footer-col form button:hover {
+    background: var(--white);
+}
+
+.footer-col .icons {
+    display: flex;
+    margin-top: 30px;
+    gap: 30px;
+    cursor: pointer;
+}
+
+.footer-col .icons i {
+    color: var(--white);
+}
+
+.footer-col .icons i:hover {
+    color: var(--white);
+}
+
+@media (max-width: 768px) {
+    .footer {
+        position: relative;
+        bottom: 0;
+        left: 0;
+        transform: none;
+        width: 100%;
+        border-radius: 0;
+    }
+
+    .footer .footer-row {
+        padding: 20px;
+        gap: 1rem;
+    }
+
+    .footer-col form {
+        display: block;
+    }
+
+    .footer-col form :where(input, button) {
+        width: 100%;
+    }
+
+    .footer-col form button {
+        margin: 10px 0 0 0;
+    }
+}
