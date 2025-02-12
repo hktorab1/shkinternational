@@ -1,18 +1,251 @@
 :root {
     --black: #333333;
     --white: #fffcf2;
-  }
-
-.d-flex.justify-content-center {
-    position: relative;
-    z-index: 100;
 }
 
+/* Apply Verdana globally */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a,
+div,
+span {
+    font-family: Verdana, Geneva, sans-serif !important;
+}
+
+/* hero section */
+.topbar {
+    top: 0;
+    /* Visible by default */
+    background: rgba(51, 51, 51, 0.3);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    padding: 10px 0;
+    transition: top 0.3s ease, background 0.3s ease;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+}
+
+.topbar.sticky {
+    background: rgba(51, 51, 51, 0.7);
+    /* 70% opacity */
+    color: var(--white);
+}
+
+
+/* Topbar contact styling */
+.topbar-contact {
+    color: var(--white);
+    font-size: 14px;
+    margin-right: 20px;
+}
+
+.topbar-contact i {
+    margin-right: 5px;
+}
+
+.logo-container {
+    position: absolute;
+    top: 60px;
+    left: 50px;
+    z-index: 100;
+}
+.logo-container img {
+    padding: 10px;
+    background-color: #000000;
+    border-radius: 15px;
+    box-shadow: 0 0 5px 2px #fffcf25e;
+
+}
+
+
+.header {
+    height: 600px;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Carousel Styles */
+.carousel {
+    height: 100%;
+}
+
+.carousel-inner {
+    height: 100%;
+}
+
+.carousel-item {
+    position: relative;
+    height: 100%;
+    /* Multiple background layers:
+       First a gradient overlay, then the image.
+       The "cover" is forced via !important */
+    background-size: 400% 400%, cover !important;
+    background-position: 0% 50%, center center !important;
+    animation: animate 3s infinite alternate;
+}
+
+/* Background images for each carousel item */
+.carousel-item:nth-child(1) {
+    background:
+        linear-gradient(45deg, rgba(51, 51, 51, 0.506), rgba(66, 4, 4, 0.7), rgba(17, 17, 99, 0.801)),
+        url('/../static/frontend/images/02-3.jpg');
+}
+
+.carousel-item:nth-child(2) {
+    background:
+        linear-gradient(45deg, rgba(51, 51, 51, 0.506), rgba(66, 4, 4, 0.7), rgba(17, 17, 99, 0.801)),
+        url('/../static/frontend/images/119-1109x699-1.jpg');
+}
+
+.carousel-item:nth-child(3) {
+    background:
+        linear-gradient(45deg, rgba(51, 51, 51, 0.506), rgba(66, 4, 4, 0.7), rgba(17, 17, 99, 0.801)),
+        url('/../static/frontend/images/516-1109x699-1.jpg');
+}
+
+/* Animation keyframes */
+@keyframes animate {
+    0% {
+        background-position: 0% 50%, center center;
+    }
+
+    100% {
+        background-position: 100% 50%, center center;
+    }
+}
+
+/* Carousel Controls */
+.carousel-control-prev,
+.carousel-control-next {
+    width: 40px;
+    height: 40px;
+    background: var(--white);
+    /* White background */
+    border-radius: 5px;
+    top: 50%;
+    transform: translateY(-50%);
+    opacity: 1;
+    z-index: 1050;
+
+    /* Use flex to center the icon */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+/* Place controls flush at the left/right edges */
+.carousel-control-prev {
+    left: 10px;
+    /* Flush to left edge */
+}
+
+.carousel-control-next {
+    right: 10px;
+    /* Flush to right edge */
+}
+
+/* Style the Font Awesome icons inside the controls */
+.carousel-control-prev i,
+.carousel-control-next i {
+    font-size: 20px;
+    /* Adjust size as needed */
+    color: var(--black);
+    /* Black icons */
+}
+
+
+
+/* Carousel Indicators */
+.carousel-indicators {
+    position: absolute;
+    bottom: 20px;
+}
+
+.carousel-indicators button {
+    width: 80px !important;
+    height: 40px !important;
+    margin: 0 5px !important;
+    border: 2px solid transparent !important;
+    opacity: 0.7;
+    background-size: cover !important;
+    background-position: center !important;
+    border-radius: 5px;
+}
+
+.carousel-indicators button:nth-child(1) {
+    background-image: url('/../static/frontend/images/02-3.jpg') !important;
+}
+
+.carousel-indicators button:nth-child(2) {
+    background-image: url('/../static/frontend/images/119-1109x699-1.jpg') !important;
+}
+
+.carousel-indicators button:nth-child(3) {
+    background-image: url('/../static/frontend/images/516-1109x699-1.jpg') !important;
+}
+
+.carousel-indicators button.active {
+    border-color: #fff !important;
+    opacity: 1;
+}
+
+/* Fade animation for carousel */
+.carousel-fade .carousel-item {
+    opacity: 0;
+    transition: opacity 0.6s ease-in-out;
+}
+
+.carousel-fade .carousel-item.active {
+    opacity: 1;
+}
+
+/* Content styling */
+.content-wrapper {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    text-align: center;
+}
+
+.carousel-item h1 {
+    font-size: 7em;
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+.carousel-item p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+    color: #fff;
+    padding: 0 25%;
+    line-height: 1.5;
+}
+
+
+
+
+
+.card {
+    box-shadow: 0 2px 6px rgb(185 166 166 / 44%);
+    border-color: var(--white);
+
+}
+
+
 .menu-box {
-    width: 290px;
     margin: 0 10px;
     text-align: center;
-    height: 200px;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
     padding-top: 25px;
     position: relative;
@@ -67,6 +300,7 @@
     /* Darker shadow on hover */
     margin: 20px 10px;
     padding: 50px 0;
+    width: 100%;
 }
 
 .heading {
@@ -109,8 +343,8 @@
 .form-container {
     max-width: 80%;
     min-height: 400px;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-    border-radius: 0 05px 5px;
+    box-shadow: 0 2px 6px rgb(185 166 166 / 44%);
+    border-radius: 20px;
 
 
 }
@@ -120,7 +354,7 @@
     color: var(--white);
     padding: 30px 0;
     margin: 50px 0;
-    border-radius: 0 0 30px 30px;
+    border-radius: 20px;
 }
 
 label.btn.d-block.mb-2.chassis-number {
@@ -135,16 +369,140 @@ input#chassis-number {
 }
 
 
-button.btn.btn-submit.w-100.mb-3,
+button.btn.btn-submit,
 button.btn.btn-primary.btn-details,
 a.btn.btn-primary {
-    padding: 15px 30px;
-    margin: 0px;
-    border-radius: 5px;
-    background-color: var(--black);
-    color: var(--white);
+    margin-top: 20px;
 }
 
+/* view details btn */
+.blackglossyCSSButtonbutton {
+    /* General  */
+
+
+    /* Size */
+    height: 40px;
+    width: 160px;
+    /* Fill */
+    background-color: transparent;
+    background-origin: border-box;
+    background-image: linear-gradient(1deg, var(--black) 0%, rgba(38, 38, 38, 0.85) 35%, rgba(64, 64, 64, 0.75) 50%, rgba(89, 89, 89, 0.78) 70%, rgb(115, 115, 115) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorStr=#FF4C4C4C, EndColorStr=#FF4C4C4C);
+    zoom: 1;
+    /* Stroke  */
+    border: 1px solid var(--black);
+    border-radius: 15px;
+    /*  Label  */
+    color: var(--white);
+    font-family: "Helvetica", "Verdana", "Arial", "sans-serif";
+    font-size: 16px;
+    text-align: center;
+    font-weight: bold;
+    text-shadow: 0px -1px 0px var(--black);
+
+
+    /*  Shadow & Inner Shadow */
+    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.5), inset 0px 1px 0px rgba(255, 255, 255, 0.15);
+
+
+    /*  Opacity  */
+    opacity: 1.000;
+
+}
+
+.blackglossyCSSButtonbutton:Hover {
+    /* General  */
+
+
+    /* Size */
+    height: 40px;
+    width: 160px;
+
+
+    /* Fill */
+    background-color: transparent;
+    background-origin: border-box;
+    background-image: linear-gradient(0deg, #404040 0.0%, #262626 50.5%, #404040 50.7%, #595959 100.0%);
+    /* Standards Compliant */
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorStr=#FF595959, EndColorStr=#FF595959);
+    /* IE6 to IE9 */
+    zoom: 1;
+
+
+    /* Stroke  */
+    border: 1px solid var(--black);
+    -moz-border-radius: 5px;
+    /* FF1-3.6 */
+    -webkit-border-radius: 5px;
+    /* Saf3-4, iOS 1-3.2, Android <1.6 */
+    border-radius: 5px 5px 5px 5px;
+    /* Opera 10.5, IE9, Saf5, Chrome, FF4, iOS 4, Android 2.1+ */
+
+
+    /*  Label  */
+    color: hsla(0.0, 0.0%, 100.0%, 1.00);
+    font-family: "Helvetica", "Verdana", "Arial", "sans-serif";
+    font-size: 16px;
+    text-align: center;
+    font-weight: bold;
+    text-shadow: 0px -1px 0px var(--black);
+
+
+    /*  Shadow & Inner Shadow */
+    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.5), inset 0px 1px 0px rgba(255, 255, 255, 0.15);
+
+
+    /*  Opacity  */
+    opacity: 1.000;
+
+}
+
+.blackglossyCSSButtonbutton:Active {
+    /* General  */
+
+
+    /* Size */
+    height: 40px;
+    width: 160px;
+
+
+    /* Fill */
+    background-color: transparent;
+    background-origin: border-box;
+    background-image: linear-gradient(0deg, rgb(64, 64, 64) 0.0%, #262626 50.5%, #404040 50.7%, #595959 100.0%);
+    /* Standards Compliant */
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorStr=#FF595959, EndColorStr=#FF595959);
+    /* IE6 to IE9 */
+    zoom: 1;
+
+
+    /* Stroke  */
+    border: 1px solid hsla(0.0, 0.0%, 15.0%, 1.00);
+    -moz-border-radius: 5px;
+    /* FF1-3.6 */
+    -webkit-border-radius: 5px;
+    /* Saf3-4, iOS 1-3.2, Android <1.6 */
+    border-radius: 5px 5px 5px 5px;
+    /* Opera 10.5, IE9, Saf5, Chrome, FF4, iOS 4, Android 2.1+ */
+
+
+    /*  Label  */
+    color: var(--white);
+    font-family: "Helvetica", "Verdana", "Arial", "sans-serif";
+    font-size: 16px;
+    text-align: center;
+    font-weight: bold;
+    text-shadow: 0px -1px 0px var(--black);
+
+
+    /*  Shadow & Inner Shadow */
+    box-shadow: 0px 1px 2px #00000040, inset 0px 0px 13px #000000bf;
+
+
+    /*  Opacity  */
+    opacity: 1.000;
+
+}
 
 /* car stock */
 
@@ -161,6 +519,7 @@ a.btn.btn-primary {
     padding: 20px;
     border-radius: 8px;
 }
+
 
 .details-popup .popup-content {
     position: relative;
@@ -217,7 +576,7 @@ a.btn.btn-primary {
     margin-top: 10px;
 }
 
-.query-section .form-select {
+.query-section .form-select, input#chassis-number, .query-text {
     border-radius: 5px;
     border: 1px solid var(--white);
     /* font-size: 0.95rem; */
@@ -229,7 +588,7 @@ a.btn.btn-primary {
     min-width: 300px;
 }
 
-.query-section .form-select:focus {
+.query-section .form-select:focus, .query-text:focus {
     border-color: var(--black);
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 }
@@ -254,20 +613,6 @@ a.btn.btn-primary {
 
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
-    .query-section .col-md-6 {
-        margin-bottom: 2rem;
-    }
-
-    .query-section .heading {
-        font-size: 1.75rem;
-    }
-
-    .query-section h3 {
-        font-size: 1.25rem;
-    }
-}
 
 /* 
 inquery form */
@@ -287,20 +632,24 @@ form#inquiry-form {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     border-radius: 5px;
     position: relative;
-    height: 200px;
     margin: 20px;
     overflow: hidden;
 }
 
 .video-card img {
     width: 100%;
-    height: 100%;
+    height: auto;
     object-fit: cover;
 }
 
 .video-overlay {
     position: relative;
     width: 100%;
+}
+
+.video-title {
+    font-weight: 600;
+    margin-bottom: 10px;
 }
 
 .play-btn {
@@ -313,8 +662,7 @@ form#inquiry-form {
     /* background-color: rgba(0, 0, 0, 0.6); */
     border-radius: 20%;
     padding: 15px;
-    display: flex
-;
+    display: flex;
     justify-content: center;
     align-items: center;
 }
@@ -338,131 +686,80 @@ form#inquiry-form {
 
 
 /* footer */
-.footer {
-    background: var(--black);
-    border-radius: 6px;
-    margin-top: 100px;
-}
 
-.footer .footer-row {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    gap: 3.5rem;
-    padding: 60px;
-}
-
-.footer-row .footer-col h4 {
+section.footer {
+    position: absolute;
+    padding: 30px 0 0 0;
+    width: 100vw;
+    background-color: var(--black);
     color: var(--white);
-    font-size: 20px;
-    font-weight: 400;
-    text-align: left;
-    /* Ensures the heading aligns to the left */
+    text-align: center;
 }
 
-.footer-col .links {
-    margin-top: 20px;
-    padding-left: 0;
-    /* Remove any default padding on the list */
-}
 
-.footer-col .links li {
-    list-style: none;
-    margin-bottom: 10px;
-    text-align: left;
-    /* Align list items to the left */
-}
 
-.footer-col .links li a {
-    text-decoration: none;
-    color: var(--white);
-}
-
-.footer-col .links li a:hover {
-    color: var(--white);
-}
-
-.footer-col p {
-    margin: 20px 0;
-    color: var(--white);
-    max-width: 300px;
-}
-
-.footer-col form {
-    display: flex;
-    gap: 5px;
-}
-
-.footer-col input {
-    height: 40px;
-    border-radius: 6px;
-    background: none;
-    width: 100%;
-    outline: none;
-    border: 1px solid #7489C6;
-    caret-color: var(--white);
-    color: var(--white);
-    padding-left: 10px;
-}
-
-.footer-col input::placeholder {
-    color: var(--white);
-}
-
-.footer-col form button {
-    background: var(--white);
-    outline: none;
-    border: none;
-    padding: 10px 15px;
-    border-radius: 6px;
-    cursor: pointer;
-    font-weight: 500;
-    transition: 0.2s ease;
-}
-
-.footer-col form button:hover {
-    background: var(--white);
-}
-
-.footer-col .icons {
-    display: flex;
-    margin-top: 30px;
-    gap: 30px;
-    cursor: pointer;
-}
-
-.footer-col .icons i {
-    color: var(--white);
-}
-
-.footer-col .icons i:hover {
-    color: var(--white);
-}
-
-@media (max-width: 768px) {
-    .footer {
-        position: relative;
-        bottom: 0;
-        left: 0;
-        transform: none;
-        width: 100%;
-        border-radius: 0;
+/* Responsive styles */
+@media (max-width: 767px) {
+    .carousel-item h1 {
+        font-size: 32px;
     }
 
-    .footer .footer-row {
-        padding: 20px;
-        gap: 1rem;
+    .carousel-item p {
+        font-size: 1em;
+        padding: 0 2%;
     }
 
-    .footer-col form {
-        display: block;
+    .carousel-indicators [data-bs-target] {
+        width: 60px;
+        height: 40px;
     }
 
-    .footer-col form :where(input, button) {
-        width: 100%;
+    .logo-container {
+        left: 20px;
     }
 
-    .footer-col form button {
-        margin: 10px 0 0 0;
+
+    .carousel-control-prev,.carousel-control-next{
+        display: none;
+    }
+/* 
+    avilabble car section */
+    img.car-image.mb-3 {
+        width: 90vw;
+    }
+
+
+    img.p-4{
+        height: 100px;
+        width: 100px !important;
+    }
+
+    .form-container{
+        max-width: 100%;
+    }
+
+    .form-container h3{
+        font-size: 20px;
+    }
+
+    button.car-btn-details.btn.blackglossyCSSButtonbutton{
+        margin-bottom: 20px;
+    }    
+
+
+    /* video section */
+    .video-gallery {
+        flex-wrap: wrap;
+    }
+    .query-section .col-md-6 {
+        margin-bottom: 2rem;
+    }
+
+    .query-section .heading {
+        font-size: 1.75rem;
+    }
+
+    .query-section h3 {
+        font-size: 1.25rem;
     }
 }

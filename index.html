@@ -4,236 +4,191 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="static/frontend/css/myStyle.css">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet"
-        media="all">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" rel="stylesheet" media="all">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css" rel="stylesheet" media="all">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.touchswipe/1.6.18/jquery.touchSwipe.min.js"></script>
-    <link href="static/frontend/css/bootstrap-touch-slider.css" rel="stylesheet" media="all">
-    <title>SHK International</title>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
 
-    <style>
-        /* Set imported font to all text */
-        body {
-            font-family: Verdana !important;
-        }
-    </style>
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" rel="stylesheet" media="all">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Verdana&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+        integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.touchswipe/1.6.19/jquery.touchSwipe.min.js"></script>
+
+    <link rel="stylesheet" href="static/frontend/css/myStyle.css">
+
+
+    <title>SHK International</title>
+
+
 </head>
 
 <body>
     <section class="hero">
-        <!-- Topbar -->
-        <div class="topbar" id="topbar">
-            <div>
-                <span style="margin-right:15px ;">
-                    <i class="fa fa-envelope"></i> info@example.com
-                </span>
-                <span>
 
-                    <i class="fa-brands fa-whatsapp"></i> +123 456 7890
-                </span>
+        <div class="topbar">
+            <div class="container">
+                <div class="d-flex justify-content-end">
+                    <span class="topbar-contact">
+                        <i class="fas fa-phone"></i> +1 234 567 890
+                    </span>
+                    <span class="topbar-contact">
+                        <i class="fas fa-envelope"></i> info@example.com
+                    </span>
+                </div>
             </div>
         </div>
 
-        <div id="bootstrap-touch-slider" class="carousel bs-slider fade  control-round indicators-line"
-            data-ride="carousel" data-pause="hover" data-interval="false">
-
-            <!-- Indicators -->
-            <!-- <ol class="carousel-indicators">
-                <li data-target="#bootstrap-touch-slider" data-slide-to="0" class="active"></li>
-                <li data-target="#bootstrap-touch-slider" data-slide-to="1"></li>
-                <li data-target="#bootstrap-touch-slider" data-slide-to="2"></li>
-            </ol> -->
-
-            <!-- Wrapper For Slides -->
-            <div class="carousel-inner" role="listbox">
-
-                <!-- First Slide -->
-                <div class="item active">
-
-                    <!-- Slide Background -->
-                    <img src="static/frontend/images/02-3.jpg" alt="Bootstrap Touch Slider" class="slide-image" />
-                    <div class="bs-slider-overlay"></div>
-
-                    <div class="container">
-                        <div class="row">
-                            <!-- Slide Text Layer -->
-                            <div class="slide-text slide_style_center">
-                                <h1 style="font-family: Verdana !important;" data-animation="animated flipInX">SHK International</h1>
-                                <p style="font-family: Verdana !important;" data-animation="animated lightSpeedIn">
-                                    Indulge in the epitome of German engineering.
-                                    Explore and Experience Unrivaled Luxury</p>
-                                <!-- <a style="font-family: Verdana !important;" href="#" target="_blank" class="btn btn-default"
-                                    data-animation="animated fadeInUp">select one</a>
-                                <a style="font-family: Verdana !important;" href="#" target="_blank" class="btn btn-primary"
-                                    data-animation="animated fadeInDown">select two</a> -->
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Logo -->
-                    <div class="logo">
-                        <img src="static/frontend/images/logo-white.jpeg" alt="Logo">
-                    </div>
-                </div>
-                <!-- End of Slide -->
-
-                <!-- Second Slide -->
-                <div class="item">
-
-                    <!-- Slide Background -->
-                    <img src="static/frontend/images/119-1109x699-1.jpg" alt="Bootstrap Touch Slider"
-                        class="slide-image" />
-                    <div class="bs-slider-overlay"></div>
-
-                    <div class="container">
-                        <div class="row">
-                            <div class="slide-text slide_style_center">
-                                <h1 style="font-family: Verdana !important;" data-animation="animated flipInX">The BMW 5
-                                    Series</h1>
-                                <p style="font-family: Verdana !important;" data-animation="animated lightSpeedIn">
-                                    Indulge in the epitome of German engineering.
-                                    Explore and Experience Unrivaled Luxury</p>
-                                <a style="font-family: Verdana !important;" href="#" target="_blank"
-                                    class="btn btn-default" data-animation="animated fadeInUp">select one</a>
-                                <a style="font-family: Verdana !important;" href="#" target="_blank"
-                                    class="btn btn-primary" data-animation="animated fadeInDown">select two</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Logo -->
-                    <div class="logo">
-                        <img src="static/frontend/images/logo-white.jpeg" alt="Logo">
-                    </div>
-                </div>
-                <!-- End of Slide -->
-
-                <!-- Third Slide -->
-                <div class="item">
-
-                    <!-- Slide Background -->
-                    <img src="static/frontend/images/516-1109x699-1.jpg" alt="Bootstrap Touch Slider"
-                        class="slide-image" />
-                    <div class="bs-slider-overlay"></div>
-
-                    <div class="container">
-                        <div class="row">
-                            <div class="slide-text slide_style_center">
-                                <h1 style="font-family: Verdana !important;" data-animation="animated flipInX">The BMW 5
-                                    Series</h1>
-                                <p style="font-family: Verdana !important;" data-animation="animated lightSpeedIn">
-                                    Indulge in the epitome of German engineering.
-                                    Explore and Experience Unrivaled Luxury</p>
-                                <a style="font-family: Verdana !important;" href="#" target="_blank"
-                                    class="btn btn-default" data-animation="animated fadeInUp">select one</a>
-                                <a style="font-family: Verdana !important;" href="#" target="_blank"
-                                    class="btn btn-primary" data-animation="animated fadeInDown">select two</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Logo -->
-                    <div class="logo">
-                        <img src="static/frontend/images/logo-white.jpeg" alt="Logo">
-                    </div>
-                </div>
-                <!-- End of Slide -->
-            </div>
-
-            <!-- Left Control -->
-            <a style="font-family: Verdana !important;" class="left carousel-control" href="#bootstrap-touch-slider"
-                role="button" data-slide="prev">
-                <span class="fa fa-angle-left" aria-hidden="true"></span>
-                <span class="sr-only">Previous</span>
-            </a>
-
-            <!-- Right Control -->
-            <a style="font-family: Verdana !important;" class="right carousel-control" href="#bootstrap-touch-slider"
-                role="button" data-slide="next">
-                <span class="fa fa-angle-right" aria-hidden="true"></span>
-                <span class="sr-only">Next</span>
-            </a>
+        <!-- Logo -->
+        <div class="logo-container">
+            <img src="static/frontend/images/logo-white.jpeg" height="80" alt="Logo">
         </div>
+
+        <div class="header">
+            <div id="carouselExampleControls" class="carousel slide carousel-fade" data-bs-ride="carousel">
+                <!-- Carousel Indicators -->
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselExampleControls" data-bs-slide-to="0" class="active"
+                        aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselExampleControls" data-bs-slide-to="1"
+                        aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselExampleControls" data-bs-slide-to="2"
+                        aria-label="Slide 3"></button>
+                </div>
+
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="content-wrapper">
+                            <!-- Use Animate.css classes (with the animate__ prefix) -->
+                            <h1 data-animation="animate__animated animate__flipInX">The BMW 5 Series</h1>
+                            <p data-animation="animate__animated animate__lightSpeedIn">
+                                Indulge in the epitome of German engineering. Explore and Experience Unrivaled Luxury
+                            </p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="content-wrapper">
+                            <h1 data-animation="animate__animated animate__flipInX">The BMW 5 Series</h1>
+                            <p data-animation="animate__animated animate__lightSpeedIn">
+                                Indulge in the epitome of German engineering. Explore and Experience Unrivaled Luxury
+                            </p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="content-wrapper">
+                            <h1 data-animation="animate__animated animate__flipInX">The BMW 5 Series</h1>
+                            <p data-animation="animate__animated animate__lightSpeedIn">
+                                Indulge in the epitome of German engineering. Explore and Experience Unrivaled Luxury
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Carousel Controls -->
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
+                    data-bs-slide="prev">
+                    <i class="fas fa-chevron-left"></i>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
+                    data-bs-slide="next">
+                    <i class="fas fa-chevron-right"></i>
+                    <span class="visually-hidden">Next</span>
+                </button>
+
+            </div>
+        </div>
+
     </section>
-    <section class="menu-blocks">
-        <div class="row">
-            <div class="d-flex justify-content-center">
-                <div class="container">
-                    <div class="row menu-block-container">
-                        <div class="col-md-6 col-12">
-                            <div class="menu-blocks-box">
-                                <a style="font-family: Verdana !important;" href="#auction-sheet-verification-section"
-                                    class="menu-box d-flex flex-column align-items-center text-center">
-                                    <img style="margin: auto; display: block;"
-                                        src="static/frontend/images/auction-sheet.png" height="70px" alt="">
-                                    <h2 style="font-family: Verdana !important;">Auction Sheet Verification</h2>
-                                </a>
-                            </div>
-                        </div>
-                        <div class="col-md-6 col-12 ">
-                            <div class="menu-blocks-box">
+    <section class="menu-blocks sub-sections">
 
-                                <a style="font-family: Verdana !important;" href="#car-stock-section"
-                                    class="menu-box d-flex flex-column align-items-center text-center">
-                                    <img style="margin: auto; display: block;"
-                                        src="static/frontend/images/car-inventory.png" height="80px" alt="">
-                                    <h2 style="font-family: Verdana !important;">Stock</h2>
-                                </a>
-                            </div>
-                        </div>
-                        <div class="col-md-6 col-12 ">
-                            <div class="menu-blocks-box">
-
-                                <a style="font-family: Verdana !important;" href="#pre-order-query"
-                                    class="menu-box d-flex flex-column align-items-center text-center">
-                                    <img style="margin: auto; display: block;"
-                                        src="static/frontend/images/pre-order.png" height="80px" alt="">
-                                    <h2 style="font-family: Verdana !important;">Pre-Order Query</h2>
-                                </a>
-                            </div>
-                        </div>
-                        <div class="col-md-6 col-12 ">
-                            <div class="menu-blocks-box">
-
-                                <a style="font-family: Verdana !important;" href="#videos"
-                                    class="menu-box d-flex flex-column align-items-center text-center">
-                                    <img style="margin: auto; display: block;" src="static/frontend/images/video.png"
-                                        height="80px" alt="">
-                                    <h2 style="font-family: Verdana !important;">Videos</h2>
-                                </a>
-                            </div>
+        <div class="container text-center">
+            <div class="row">
+                <div class="col-sm-5 col-md-6">
+                    <div class="card text-white text-centerpb-2 m-4">
+                        <div class="card-body">
+                            <a href="#auction-sheet-verification-section" class="d-flex text-decoration-none p-2">
+                                <img style=" display: block; width:200px; object-fit:cover" class="p-4"
+                                    src="static/frontend/images/auction-sheet.png" height="200px" alt="">
+                                <div class="d-flex flex-column align-items-center justify-content-center">
+                                    <h3 class="card-title text-dark">Auction Sheet Verification</h3>
+                                </div>
+                            </a>
                         </div>
                     </div>
                 </div>
+                <div class="col-sm-5 col-md-6">
+                    <div class="card text-white text-centerpb-2 m-4">
+                        <div class="card-body">
+                            <a href="#car-stock-section" class="d-flex text-decoration-none p-2">
+                                <img style=" display: block; width:200px; object-fit:cover" class="p-4"
+                                    src="static/frontend/images/car-inventory.png" height="200px" alt="">
+                                <div class="d-flex flex-column align-items-center justify-content-center">
 
+                                    <h3 class="card-title text-dark">Stock</h3>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
             </div>
 
-        </div>
 
 
+
+
+            <div class="row">
+                <div class="col-sm-5 col-md-6">
+                    <div class="card text-white text-centerpb-2 m-4">
+                        <div class="card-body">
+                            <a href="#pre-order-query" class="d-flex text-decoration-none p-2">
+                                <img style=" display: block; width:200px; object-fit:cover" class="p-4"
+                                    src="static/frontend/images/pre-order.png" height="200px" alt="">
+                                <div class="d-flex flex-column align-items-center justify-content-center">
+
+                                    <h3 class="card-title text-dark">Pre Order</h3>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-5 col-md-6">
+                    <div class="card text-white text-centerpb-2 m-4">
+                        <div class="card-body">
+                            <a href="#videos" class="d-flex text-decoration-none p-2">
+                                <img style=" display: block; width:200px; object-fit:cover" class="p-4"
+                                    src="static/frontend/images/video.png" height="200px" alt="">
+                                <div class="d-flex flex-column align-items-center justify-content-center">
+
+                                    <h3 class="card-title text-dark">Video</h3>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
     <section class="auction-sheet-verification-section sub-sections" id="auction-sheet-verification-section">
         <div class="container py-5">
-            <h2 style="font-family: Verdana !important;" class="heading text-center mb-4">Auction Sheet Verification
+            <h2 class="heading text-center mb-4">Auction Sheet Verification
             </h2>
             <div class="row sub-section-row align-items-stretch">
                 <!-- Form Column -->
                 <div class="col-lg-6 mb-4">
-                    <div class="form-container text-center py-4 px-3">
-                        <h3 class="mb-3">AUCTION SHEET VERIFICATION OF JAPANESE CARS</h3>
+                    <div class="form-container text-center">
+                        <h3 class="">AUCTION SHEET VERIFICATION OF JAPANESE CARS</h3>
                         <form action="/verify-auction-sheet" method="post">
                             <label for="chassis-number" class="btn d-block mb-2 chassis-number">Enter Your CHASSIS
                                 Number</label>
                             <input type="text" id="chassis-number" name="chassis_number" class="form-control mb-3"
                                 placeholder="XXT240-545657" style="text-align: center;">
-                            <button style="font-family: Verdana !important;" type="submit"
-                                class="btn btn-submit w-100 mb-3">Search now</button>
+                            <button type="submit" class="btn btn-submit blackglossyCSSButtonbutton">Search now</button>
                         </form>
                     </div>
                 </div>
@@ -259,68 +214,72 @@
 
     <section class="car-stock-section py-5 sub-sections" id="car-stock-section">
         <div class="container">
-            <h2 style="font-family: Verdana !important;" class="heading text-center mb-5">Available Cars</h2>
+            <h2 class="heading text-center mb-5">Available Cars</h2>
             <div class="row">
                 <!-- Car Cards -->
                 <div class="col-md-6 mb-4">
-                    <div class="car-card text-center">
-                        <img src="static/frontend/images/toyota-corolla-2020.jpg" height="250px"
-                            alt="Toyota Corolla 2020" class="car-image mb-3">
-                        <h4 class="car-title">Toyota Corolla 2020</h4>
-                        <p style="font-family: Verdana !important;" class="car-price">$20,000</p>
-                        <div class="car-actions">
-                            <button style="font-family: Verdana !important;" class="btn btn-primary btn-details"
-                                data-target="#toyota-details">View
-                                Details</button>
-                            <a style="font-family: Verdana !important;" href="#inquiry-form"
-                                class="btn btn-secondary">Inquire</a>
+                    <div class="card">
+                        <div class="car-card text-center">
+                            <img src="static/frontend/images/toyota-corolla-2020.jpg" height="250px"
+                                alt="Toyota Corolla 2020" class="car-image mb-3">
+                            <h4 class="car-title">Toyota Corolla 2020</h4>
+                            <p class="car-price">$20,000</p>
+                            <div class="car-actions m-3">
+                                <button class="car-btn-details btn blackglossyCSSButtonbutton"
+                                    data-target="#toyota-details">View
+                                    Details</button>
+                                <a href="#inquiry-form" class="btn blackglossyCSSButtonbutton">Inquire</a>
+                            </div>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-6 mb-4">
-                    <div class="car-card text-center">
-                        <img src="static/frontend/images/honda-civic-2021.jpg" height="250px" alt="Honda Civic 2021"
-                            class="car-image mb-3">
-                        <h4 class="car-title">Honda Civic 2021</h4>
-                        <p style="font-family: Verdana !important;" class="car-price">$22,500</p>
-                        <div class="car-actions">
-                            <button style="font-family: Verdana !important;" class="btn btn-primary btn-details"
-                                data-target="#honda-details">View
-                                Details</button>
-                            <a style="font-family: Verdana !important;" href="#inquiry-form"
-                                class="btn btn-secondary">Inquire</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-6 mb-4">
-                    <div class="car-card text-center">
-                        <img src="static/frontend/images/Mazda CX-5 2019.png" height="250px" alt="Honda Civic 2021"
-                            class="car-image mb-3">
-                        <h4 class="car-title">Mazda CX-5 2019</h4>
-                        <p style="font-family: Verdana !important;" class="car-price">$22,500</p>
-                        <div class="car-actions">
-                            <button style="font-family: Verdana !important;" class="btn btn-primary btn-details"
-                                data-target="#honda-details">View
-                                Details</button>
-                            <a style="font-family: Verdana !important;" href="#inquiry-form"
-                                class="btn btn-secondary">Inquire</a>
+                    <div class="card">
+                        <div class="car-card text-center">
+                            <img src="static/frontend/images/honda-civic-2021.jpg" height="250px" alt="Honda Civic 2021"
+                                class="car-image mb-3">
+                            <h4 class="car-title">Honda Civic 2021</h4>
+                            <p class="car-price">$22,500</p>
+                            <div class="car-actions m-3">
+                                <button class="car-btn-details btn blackglossyCSSButtonbutton"
+                                    data-target="#honda-details">View
+                                    Details</button>
+                                <a href="#inquiry-form" class="btn blackglossyCSSButtonbutton">Inquire</a>
+                            </div>
                         </div>
                     </div>
                 </div>
 
                 <div class="col-md-6 mb-4">
-                    <div class="car-card text-center">
-                        <img src="static/frontend/images/Mitsubishi-Evo-8.png" height="250px" alt="Honda Civic 2021"
-                            class="car-image mb-3">
-                        <h4 class="car-title">Mitsubishi Evo 8</h4>
-                        <p style="font-family: Verdana !important;" class="car-price">$22,500</p>
-                        <div class="car-actions">
-                            <button style="font-family: Verdana !important;" class="btn btn-primary btn-details"
-                                data-target="#honda-details">View
-                                Details</button>
-                            <a style="font-family: Verdana !important;" href="#inquiry-form"
-                                class="btn btn-secondary">Inquire</a>
+                    <div class="card">
+                        <div class="car-card text-center">
+                            <img src="static/frontend/images/Mazda CX-5 2019.png" height="250px" alt="Honda Civic 2021"
+                                class="car-image mb-3">
+                            <h4 class="car-title">Mazda CX-5 2019</h4>
+                            <p class="car-price">$22,500</p>
+                            <div class="car-actions m-3">
+                                <button class="car-btn-details btn blackglossyCSSButtonbutton"
+                                    data-target="#honda-details">View
+                                    Details</button>
+                                <a href="#inquiry-form" class="btn blackglossyCSSButtonbutton">Inquire</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 mb-4">
+                    <div class="card">
+                        <div class="car-card text-center">
+                            <img src="static/frontend/images/Mitsubishi-Evo-8.png" height="250px" alt="Honda Civic 2021"
+                                class="car-image mb-3">
+                            <h4 class="car-title">Mitsubishi Evo 8</h4>
+                            <p class="car-price">$22,500</p>
+                            <div class="car-actions m-3">
+                                <button class="car-btn-details btn blackglossyCSSButtonbutton"
+                                    data-target="#honda-details">View
+                                    Details</button>
+                                <a href="#inquiry-form" class="btn blackglossyCSSButtonbutton">Inquire</a>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -330,7 +289,7 @@
 
             <!-- View More Button -->
             <div class="text-center mt-10" style="margin-top:60px ;">
-                <a style="font-family: Verdana !important;" href="/car-listing" class="btn btn-primary">View More
+                <a href="/car-listing" class="btn blackglossyCSSButtonbutton">View More
                     Cars</a>
             </div>
         </div>
@@ -374,7 +333,7 @@
 
     <section class="query-section py-5 sub-sections" id="pre-order-query">
         <div class="container">
-            <h2 style="font-family: Verdana !important;" class="heading text-center mb-5">Find Your Dream Car</h2>
+            <h2 class="heading text-center mb-5">Find Your Dream Car</h2>
 
             <div class="row">
                 <!-- Left Column -->
@@ -396,7 +355,7 @@
                     <!-- <h3 class="mb-4">Inquiry Form</h3> -->
                     <form id="inquiry-form">
                         <!-- Brand Dropdown -->
-                        <div class="mb-3 text-center">
+                        <div class="mb-3 ">
                             <div class="query-form-label">
                                 <label for="brand" class="form-label">Brand</label>
                             </div>
@@ -408,7 +367,7 @@
                         </div>
 
                         <!-- Model Dropdown -->
-                        <div class="mb-3 text-center">
+                        <div class="mb-3 ">
                             <div class="query-form-label">
                                 <label for="model" class="form-label">Model</label>
                             </div>
@@ -418,7 +377,7 @@
                         </div>
 
                         <!-- Year Dropdown -->
-                        <div class="mb-3 text-center">
+                        <div class="mb-3 ">
                             <div class="query-form-label">
                                 <label for="year" class="form-label">Year</label>
                             </div>
@@ -427,10 +386,20 @@
                             </select>
                         </div>
 
+                        <!-- Model Dropdown -->
+                        <div class="mb-3">
+                            <div class="query-form-label">
+                                <label for="model" class="form-label">Comments</label>
+                            </div>
+                            <textarea name="Comments" class="form-control query-text" id=""></textarea>
+                            <!-- <select id="model" class="form-select" disabled>
+                                <option value="" selected disabled>Select Model</option>
+                            </select> -->
+                        </div>
+
                         <!-- Submit Button -->
                         <div class="mb-3 text-center">
-                            <button style="font-family: Verdana !important;" type="submit"
-                                class="btn btn-primary w-100">Submit Inquiry</button>
+                            <button type="submit" class="btn btn-primary w-100">Submit Inquiry</button>
                         </div>
                     </form>
                 </div>
@@ -439,160 +408,158 @@
     </section>
 
     <section class="video-section sub-sections" id="videos">
-        <h2 style="font-family: Verdana !important;" class="heading text-center mb-5">Videos</h2>
-    
+        <h2 class="heading text-center mb-5">Videos</h2>
+
         <!-- Video Gallery -->
         <div class="container">
             <div class="row" style="display: flex; justify-content: space-between">
-                <!-- Video 1 -->
                 <div class="video-gallery">
+                    <!-- Video 1 -->
                     <div class="video-card">
-                        <a style="font-family: Verdana !important;" href="javascript:void(0);" data-toggle="modal"
-                            data-target="#videoModal" data-video="https://www.youtube.com/embed/pgvEnDkNUfg">
-                            <div class="video-overlay">
-                                <img src="https://img.youtube.com/vi/pgvEnDkNUfg/0.jpg" class="img-fluid" alt="Video 1">
-                                <div class="play-btn">
-                                    <i class="fa fa-play"></i>
-                                </div>
+                        <div class="video-title">Product Showcase 2024</div>
+                        <div class="video-overlay" data-bs-toggle="modal" data-bs-target="#videoModal"
+                            data-video="https://www.youtube.com/embed/pgvEnDkNUfg">
+                            <img src="https://img.youtube.com/vi/pgvEnDkNUfg/0.jpg" class="img-fluid" alt="Video 1">
+                            <div class="play-btn">
+                                <i class="fa fa-play"></i>
                             </div>
-                        </a>
+                        </div>
                     </div>
-    
+
+                    <!-- Video 2 -->
                     <div class="video-card">
-                        <a style="font-family: Verdana !important;" href="javascript:void(0);" data-toggle="modal"
-                            data-target="#videoModal" data-video="https://www.youtube.com/embed/F8KUdvmW2EQ">
-                            <div class="video-overlay">
-                                <img src="https://img.youtube.com/vi/F8KUdvmW2EQ/0.jpg" class="img-fluid" alt="Video 2">
-                                <div class="play-btn">
-                                    <i class="fa fa-play"></i>
-                                </div>
+                        <div class="video-title">Product Features Overview</div>
+                        <div class="video-overlay" data-bs-toggle="modal" data-bs-target="#videoModal"
+                            data-video="https://www.youtube.com/embed/F8KUdvmW2EQ">
+                            <img src="https://img.youtube.com/vi/F8KUdvmW2EQ/0.jpg" class="img-fluid" alt="Video 2">
+                            <div class="play-btn">
+                                <i class="fa fa-play"></i>
                             </div>
-                        </a>
+                        </div>
                     </div>
-    
+
+                    <!-- Video 3 -->
                     <div class="video-card">
-                        <a style="font-family: Verdana !important;" href="javascript:void(0);" data-toggle="modal"
-                            data-target="#videoModal" data-video="https://www.youtube.com/embed/JkkuA9AQnYc">
-                            <div class="video-overlay">
-                                <img src="https://img.youtube.com/vi/JkkuA9AQnYc/0.jpg" class="img-fluid" alt="Video 2">
-                                <div class="play-btn">
-                                    <i class="fa fa-play"></i>
-                                </div>
+                        <div class="video-title">Technical Demonstration</div>
+                        <div class="video-overlay" data-bs-toggle="modal" data-bs-target="#videoModal"
+                            data-video="https://www.youtube.com/embed/JkkuA9AQnYc">
+                            <img src="https://img.youtube.com/vi/JkkuA9AQnYc/0.jpg" class="img-fluid" alt="Video 3">
+                            <div class="play-btn">
+                                <i class="fa fa-play"></i>
                             </div>
-                        </a>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    
+
         <div class="container">
             <div class="row" style="display: flex; justify-content: space-between">
-                <!-- Video 1 -->
                 <div class="video-gallery">
+                    <!-- Video 4 -->
                     <div class="video-card">
-                        <a style="font-family: Verdana !important;" href="javascript:void(0);" data-toggle="modal"
-                            data-target="#videoModal" data-video="https://www.youtube.com/embed/lO4rVikAslM">
-                            <div class="video-overlay">
-                                <img src="https://img.youtube.com/vi/lO4rVikAslM/0.jpg" class="img-fluid" alt="Video 1">
-                                <div class="play-btn">
-                                    <i class="fa fa-play"></i>
-                                </div>
+                        <div class="video-title">Manufacturing Process</div>
+                        <div class="video-overlay" data-bs-toggle="modal" data-bs-target="#videoModal"
+                            data-video="https://www.youtube.com/embed/lO4rVikAslM">
+                            <img src="https://img.youtube.com/vi/lO4rVikAslM/0.jpg" class="img-fluid" alt="Video 4">
+                            <div class="play-btn">
+                                <i class="fa fa-play"></i>
                             </div>
-                        </a>
+                        </div>
                     </div>
-    
+
+                    <!-- Video 5 -->
                     <div class="video-card">
-                        <a style="font-family: Verdana !important;" href="javascript:void(0);" data-toggle="modal"
-                            data-target="#videoModal" data-video="https://www.youtube.com/embed/QP0yALzmi8k">
-                            <div class="video-overlay">
-                                <img src="https://img.youtube.com/vi/QP0yALzmi8k/0.jpg" class="img-fluid" alt="Video 2">
-                                <div class="play-btn">
-                                    <i class="fa fa-play"></i>
-                                </div>
+                        <div class="video-title">Quality Testing</div>
+                        <div class="video-overlay" data-bs-toggle="modal" data-bs-target="#videoModal"
+                            data-video="https://www.youtube.com/embed/QP0yALzmi8k">
+                            <img src="https://img.youtube.com/vi/QP0yALzmi8k/0.jpg" class="img-fluid" alt="Video 5">
+                            <div class="play-btn">
+                                <i class="fa fa-play"></i>
                             </div>
-                        </a>
+                        </div>
                     </div>
-    
+
+                    <!-- Video 6 -->
                     <div class="video-card">
-                        <a style="font-family: Verdana !important;" href="javascript:void(0);" data-toggle="modal"
-                            data-target="#videoModal" data-video="https://www.youtube.com/embed/iDIzrle1bAo">
-                            <div class="video-overlay">
-                                <img src="https://img.youtube.com/vi/iDIzrle1bAo/0.jpg" class="img-fluid" alt="Video 2">
-                                <div class="play-btn">
-                                    <i class="fa fa-play"></i>
-                                </div>
+                        <div class="video-title">Product Applications</div>
+                        <div class="video-overlay" data-bs-toggle="modal" data-bs-target="#videoModal"
+                            data-video="https://www.youtube.com/embed/iDIzrle1bAo">
+                            <img src="https://img.youtube.com/vi/iDIzrle1bAo/0.jpg" class="img-fluid" alt="Video 6">
+                            <div class="play-btn">
+                                <i class="fa fa-play"></i>
                             </div>
-                        </a>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    
+
         <div class="container">
             <div class="row" style="display: flex; justify-content: space-between">
-                <!-- Video 1 -->
                 <div class="video-gallery">
+                    <!-- Video 7 -->
                     <div class="video-card">
-                        <a style="font-family: Verdana !important;" href="javascript:void(0);" data-toggle="modal"
-                            data-target="#videoModal" data-video="https://www.youtube.com/embed/r3iev0oDE0o">
-                            <div class="video-overlay">
-                                <img src="https://img.youtube.com/vi/r3iev0oDE0o/0.jpg" class="img-fluid" alt="Video 1">
-                                <div class="play-btn">
-                                    <i class="fa fa-play"></i>
-                                </div>
+                        <div class="video-title">Installation Guide</div>
+                        <div class="video-overlay" data-bs-toggle="modal" data-bs-target="#videoModal"
+                            data-video="https://www.youtube.com/embed/r3iev0oDE0o">
+                            <img src="https://img.youtube.com/vi/r3iev0oDE0o/0.jpg" class="img-fluid" alt="Video 7">
+                            <div class="play-btn">
+                                <i class="fa fa-play"></i>
                             </div>
-                        </a>
+                        </div>
                     </div>
-    
+
+                    <!-- Video 8 -->
                     <div class="video-card">
-                        <a style="font-family: Verdana !important;" href="javascript:void(0);" data-toggle="modal"
-                            data-target="#videoModal" data-video="https://www.youtube.com/embed/80Jq3pnqdQI">
-                            <div class="video-overlay">
-                                <img src="https://img.youtube.com/vi/80Jq3pnqdQI/0.jpg" class="img-fluid" alt="Video 2">
-                                <div class="play-btn">
-                                    <i class="fa fa-play"></i>
-                                </div>
+                        <div class="video-title">Maintenance Tips</div>
+                        <div class="video-overlay" data-bs-toggle="modal" data-bs-target="#videoModal"
+                            data-video="https://www.youtube.com/embed/80Jq3pnqdQI">
+                            <img src="https://img.youtube.com/vi/80Jq3pnqdQI/0.jpg" class="img-fluid" alt="Video 8">
+                            <div class="play-btn">
+                                <i class="fa fa-play"></i>
                             </div>
-                        </a>
+                        </div>
                     </div>
-    
+
+                    <!-- Video 9 -->
                     <div class="video-card">
-                        <a style="font-family: Verdana !important;" href="javascript:void(0);" data-toggle="modal"
-                            data-target="#videoModal" data-video="https://www.youtube.com/embed/GKedep96Hs8">
-                            <div class="video-overlay">
-                                <img src="https://img.youtube.com/vi/GKedep96Hs8/0.jpg" class="img-fluid" alt="Video 2">
-                                <div class="play-btn">
-                                    <i class="fa fa-play"></i>
-                                </div>
+                        <div class="video-title">Customer Success Stories</div>
+                        <div class="video-overlay" data-bs-toggle="modal" data-bs-target="#videoModal"
+                            data-video="https://www.youtube.com/embed/GKedep96Hs8">
+                            <img src="https://img.youtube.com/vi/GKedep96Hs8/0.jpg" class="img-fluid" alt="Video 9">
+                            <div class="play-btn">
+                                <i class="fa fa-play"></i>
                             </div>
-                        </a>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    
+
     </section>
-    
-    
+
+
 
 
     <!-- Modal for video -->
     <!-- Video Modal -->
-<div class="modal fade" id="videoModal" tabindex="-1" role="dialog" aria-labelledby="videoModalLabel" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="videoModalLabel">Video</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <div class="modal-body">
-                <iframe id="videoFrame" width="100%" height="315" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <div class="modal fade" id="videoModal" tabindex="-1" aria-labelledby="videoModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="videoModalLabel">Video</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="ratio ratio-16x9">
+                        <iframe id="videoFrame" src="" allowfullscreen></iframe>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
-</div>
+
 
 
 
@@ -602,33 +569,33 @@
             <div class="footer-col">
                 <h4>Info</h4>
                 <ul class="links">
-                    <li><a style="font-family: Verdana !important;" href="#">About Us</a></li>
-                    <li><a style="font-family: Verdana !important;" href="#">Compressions</a></li>
-                    <li><a style="font-family: Verdana !important;" href="#">Customers</a></li>
-                    <li><a style="font-family: Verdana !important;" href="#">Service</a></li>
-                    <li><a style="font-family: Verdana !important;" href="#">Collection</a></li>
+                    <li><a  href="#">About Us</a></li>
+                    <li><a  href="#">Compressions</a></li>
+                    <li><a  href="#">Customers</a></li>
+                    <li><a  href="#">Service</a></li>
+                    <li><a  href="#">Collection</a></li>
                 </ul>
             </div>
             <div class="footer-col">
                 <h4>Explore</h4>
                 <ul class="links">
-                    <li><a style="font-family: Verdana !important;" href="#">Free Designs</a></li>
-                    <li><a style="font-family: Verdana !important;" href="#">Latest Designs</a></li>
-                    <li><a style="font-family: Verdana !important;" href="#">Themes</a></li>
-                    <li><a style="font-family: Verdana !important;" href="#">Popular Designs</a></li>
-                    <li><a style="font-family: Verdana !important;" href="#">Art Skills</a></li>
-                    <li><a style="font-family: Verdana !important;" href="#">New Uploads</a></li>
+                    <li><a  href="#">Free Designs</a></li>
+                    <li><a  href="#">Latest Designs</a></li>
+                    <li><a  href="#">Themes</a></li>
+                    <li><a  href="#">Popular Designs</a></li>
+                    <li><a  href="#">Art Skills</a></li>
+                    <li><a  href="#">New Uploads</a></li>
                 </ul>
             </div>
             <div class="footer-col">
                 <h4>Legal</h4>
                 <ul class="links">
-                    <li><a style="font-family: Verdana !important;" href="#">Customer Agreement</a></li>
-                    <li><a style="font-family: Verdana !important;" href="#">Privacy Policy</a></li>
-                    <li><a style="font-family: Verdana !important;" href="#">GDPR</a></li>
-                    <li><a style="font-family: Verdana !important;" href="#">Security</a></li>
-                    <li><a style="font-family: Verdana !important;" href="#">Testimonials</a></li>
-                    <li><a style="font-family: Verdana !important;" href="#">Media Kit</a></li>
+                    <li><a  href="#">Customer Agreement</a></li>
+                    <li><a  href="#">Privacy Policy</a></li>
+                    <li><a  href="#">GDPR</a></li>
+                    <li><a  href="#">Security</a></li>
+                    <li><a  href="#">Testimonials</a></li>
+                    <li><a  href="#">Media Kit</a></li>
                 </ul>
             </div>
             <div class="footer-col">
@@ -640,7 +607,7 @@
                 </p>
                 <form action="#">
                     <input type="text" placeholder="Your email" required>
-                    <button style="font-family: Verdana !important;" type="submit">SUBSCRIBE</button>
+                    <button  type="submit">SUBSCRIBE</button>
                 </form>
                 <div class="icons">
                     <i class="fa-brands fa-facebook-f"></i>
@@ -654,26 +621,19 @@
 
 
 
+    <section class="footer sub-section">
 
+        <footer class="footer">
+            <div class="container">
+                <p>&copy; 2024 SHK International. All rights reserved.</p>
+            </div>
+        </footer>
+    </section>
 
 </body>
 
-<script src="static/frontend/js/bootstrap-touch-slider.js"></script>
 <script src="static/frontend/js/myScript.js"></script>
 
-<script>
-    $(document).ready(function () {
-        const topbar = $("#topbar");
-        $(window).scroll(function () {
-            if ($(window).scrollTop() > 0) {
-                topbar.addClass("sticky");
-            } else {
-                topbar.removeClass("sticky");
-            }
-        });
 
-        $('#bootstrap-touch-slider').bsTouchSlider();
-    });
-</script>
 
 </html>
